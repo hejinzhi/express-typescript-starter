@@ -32,23 +32,25 @@ export interface AuthToken {
 
 const userSchema = new mongoose.Schema<UserDocument>(
     {
-        email: { type: String, unique: true },
+        // email: { type: String, unique: true },
+        email: String,
+        age: Number,
         password: String,
-        passwordResetToken: String,
-        passwordResetExpires: Date,
+        // passwordResetToken: String,
+        // passwordResetExpires: Date,
     
-        facebook: String,
-        twitter: String,
-        google: String,
-        tokens: Array,
+        // facebook: String,
+        // twitter: String,
+        // google: String,
+        // tokens: Array,
     
-        profile: {
-            name: String,
-            gender: String,
-            location: String,
-            website: String,
-            picture: String
-        }
+        // profile: {
+        //     name: String,
+        //     gender: String,
+        //     location: String,
+        //     website: String,
+        //     picture: String
+        // }
     },
     { timestamps: true },
 );
